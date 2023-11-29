@@ -1,1 +1,2 @@
-print("word: {:3}")
+var= "word"
+print(var[:3])
