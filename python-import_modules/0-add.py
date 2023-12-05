@@ -3,6 +3,6 @@ if __name__ == "__main__":
      return a - b
 a = 1
 b = 2
-result = (a,b)
+result = (a-b)
 
 print("{} + {} = {}".format(a, b, result))
