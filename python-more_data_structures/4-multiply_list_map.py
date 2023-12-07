@@ -1,2 +1,2 @@
-def best_score(a_dictionary):
-    return None if not a_dictionary else next(map(lambda k: k[1], sorted(map(lambda kv: (kv[1], kv[0]), a_dictionary.items()), reverse=True)))
+def multiply_list_map(my_list=[], number=0):
+    return list(map(lambda x: x * number, my_list))
