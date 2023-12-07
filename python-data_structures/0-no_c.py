@@ -1,7 +1,6 @@
-def square_matrix_simple(matrix=[]):
-    new_matrix = []
-    for row in matrix:
-        squared_row = [num ** 2 for num in row]
-        new_matrix.append(squared_row)
-
-    return new_matrix
+def no_c(my_string):
+    filtered_string = ""
+    for char in my_string:
+        if char.lower() != 'c':
+            filtered_string += char
+    return filtered_string
