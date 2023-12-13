@@ -1,21 +1,24 @@
+"""
+This module defines a simple Square class.
+"""
+
 class Square:
     """
-    A class representing a square.
+    This is a simple Square class.
 
     Attributes:
-        __size (int): Private attribute representing the size of the square.
+        __size (int): The size of the square.
 
     Methods:
-        __init__(self, size): Initializes a square with the given size.
-
+        __init__(self, size): Constructor to initialize the square with a given size.
     """
 
     def __init__(self, size):
         """
-        Initializes a square with the given size.
+        Constructor for the Square class.
 
-        Parameters:
+        Args:
             size (int): The size of the square.
-
         """
-        self.__size = size  
+        self.__size = size
+        
