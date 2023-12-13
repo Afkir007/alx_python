@@ -18,14 +18,4 @@ class Square:
             size (int): The size of the square.
 
         """
-        self.__size = size  # Private instance attribute
-
-    def get_size(self):
-        """
-        Gets the size of the square.
-
-        Returns:
-            int: The size of the square.
-
-        """
-        return self.__size
+        self.__size = size  
