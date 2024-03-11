@@ -1,5 +1,4 @@
-"""A script that lists all states from the database"""
-
+""" a safe version of my_filter_states """
 
 import sys
 import MySQLdb
@@ -8,6 +7,7 @@ if __name__ == "__main__":
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
+    state = sys.argv[4]
 
     db = MySQLdb.connect(
         host="localhost",
@@ -15,12 +15,19 @@ if __name__ == "__main__":
         user=username,
         passwd=password,
         db=database
-        )
+    )
+
     cur = db.cursor()
 
-    query = "SELECT * FROM states ORDER BY id ASC"
+    query = """
+    SELECT *
+    FROM states
+    WHERE name
+    LIKE BINARY %s
+    ORDER BY id ASC
+    """
 
-    cur.execute(query)
+    cur.execute(query, (state,))
 
     rows = cur.fetchall()
     for row in rows:

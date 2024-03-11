@@ -1,5 +1,4 @@
-"""A script that lists all states from the database"""
-
+"""lists all cities from the database"""
 
 import sys
 import MySQLdb
@@ -15,10 +14,16 @@ if __name__ == "__main__":
         user=username,
         passwd=password,
         db=database
-        )
+    )
+
     cur = db.cursor()
 
-    query = "SELECT * FROM states ORDER BY id ASC"
+    query = """
+    SELECT cities.id, cities.name, states.name
+    FROM cities
+    JOIN states ON cities.state_id = states.id
+    ORDER BY id ASC
+    """
 
     cur.execute(query)
 
